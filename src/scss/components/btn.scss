@@ -1,0 +1,43 @@
+// btn
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  transition: background-color .2s linear, color .2s linear;
+  column-gap: 10px;
+  height: 36px;
+  font-size: 14px;
+  line-height: 143%;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 2px;
+
+  cursor: pointer;
+
+  &--lg {
+    height: 65px;
+
+    @media(max-width: 991px) {
+      height: 50px;
+    }
+  }
+
+  &--white {
+    background-color: #fff;
+  }
+
+  &--blue {
+    background: var(--brand-primary);
+    color: var(--bootstrap-white);
+    &:hover {
+      background: var(--hover);
+    }
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+    stroke: #000;
+  }
+}

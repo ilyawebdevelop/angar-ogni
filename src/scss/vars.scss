@@ -1,0 +1,38 @@
+// Font-weights
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+$extrabold: 800;
+$black: 900;
+
+// Containers
+:root {
+  --content-width: 1820px;
+  --content-fluid-width: 1700px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --container-fluid-width: calc(var(--content-fluid-width) + (var(--container-offset) * 2));
+  --font-family: 'WorkSansCyr';
+  --brand-primary: #0a51a1;
+  --hover: #07458b;
+  --gray-gray-100: #f8f9fa;
+  --gray-gray-200: #e9ecef;
+  --gray-gray-300: #dee2e6;
+  --gray-gray-400: #ced4da;
+  --gray-gray-500: #adb5bd;
+  --gray-gray-600: #6c757d;
+  --gray-gray-700: #495057;
+  --gray-gray-800: #343a40;
+  --gray-gray-900: #212529;
+  --bootstrap-primary: #0d6efd;
+  --bootstrap-secondary: #6c757d;
+  --bootstrap-success: #198754;
+  --bootstrap-danger: #dc3545;
+  --bootstrap-warning: #ffc107;
+  --bootstrap-info: #0dcaf0;
+  --bootstrap-light: #f8f9fa;
+  --bootstrap-dark: #212529;
+  --bootstrap-white: #fff;
+}
