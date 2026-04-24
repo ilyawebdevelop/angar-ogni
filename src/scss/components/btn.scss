@@ -30,8 +30,49 @@
   &--blue {
     background: var(--brand-primary);
     color: var(--bootstrap-white);
+
     &:hover {
       background: var(--hover);
+    }
+  }
+
+  &-gray-800 {
+    background-color: var(--gray-gray-800);
+    color: var(--bootstrap-white);
+
+    &:hover {
+      background-color: var(--gray-gray-700);
+    }
+
+    svg {
+      fill: var(--gray-gray-500) !important;
+      stroke: transparent !important;
+    }
+  }
+
+  &-transparent {
+    background-color: transparent;
+
+    &:hover {
+      background: var(--gray-gray-200);
+    }
+
+    &-blue {
+      border: 1px solid var(--brand-primary);
+
+      &:hover {
+        background-color: var(--brand-primary);
+        color: var(--bootstrap-white);
+      }
+    }
+
+    &-white {
+      border: 1px solid var(--bootstrap-white);
+
+      &:hover {
+        background-color: var(--bootstrap-white);
+        color: var(--brand-primary);
+      }
     }
   }
 
@@ -39,5 +80,23 @@
     width: 16px;
     height: 16px;
     stroke: #000;
+  }
+}
+
+.play-btn {
+  width: fit-content;
+  position: relative;
+  z-index: 1;
+
+  img {
+    width: 64px;
+  }
+}
+
+.footerActionBtn {
+  &[aria-expanded="true"] {
+    svg {
+      transform: rotate(180deg);
+    }
   }
 }

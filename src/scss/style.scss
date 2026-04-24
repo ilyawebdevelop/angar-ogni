@@ -1,8 +1,14 @@
 // стили для свайпера
 @import "../../node_modules/swiper/swiper-bundle.min";
 
+// стили для select2
+@import './select2.min';
+
 // bootstrap v5.3.2
 @import "./bootstrap.min";
+
+// fancybox
+@import './fancybox';
 
 // Базовые подключения
 @import 'vars';

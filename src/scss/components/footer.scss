@@ -1,4 +1,30 @@
 // Footer
 .footer {
+  &C {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 
+  &B {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .socials {
+    ul {
+      li {
+        a {
+          &:hover {
+            opacity: .85;
+          }
+        }
+      }
+    }
+  } 
+}
+
+.develop {
+  &:hover {
+    opacity: .85;
+  }
 }
