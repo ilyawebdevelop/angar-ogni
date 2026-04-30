@@ -74,6 +74,26 @@
         color: var(--brand-primary);
       }
     }
+
+    &-gray-300 {
+      border: 1px solid var(--gray-gray-300);
+
+      &:hover {
+        background-color: var(--gray-gray-300);
+      }
+    }
+
+    &-gray-400 {
+      border: 1px solid var(--gray-gray-400);
+
+      &:hover {
+        background-color: var(--gray-gray-400);
+      }
+    }
+  }
+
+  &.h-44 {
+    height: 44px;
   }
 
   svg {

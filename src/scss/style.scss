@@ -10,6 +10,9 @@
 // fancybox
 @import './fancybox';
 
+// air datepicker
+@import "../../node_modules/air-datepicker/air-datepicker";
+
 // Базовые подключения
 @import 'vars';
 @import 'mixins';
@@ -19,6 +22,7 @@
 
 // Подключения компонентов страницы
 @import "./components/btn";
+@import "./components/pagination";
 @import "./components/burger";
 @import "./components/modal";
 @import "./components/tabs";
