@@ -459,6 +459,18 @@ a.h3 {
   }
 }
 
+.hover-bg-gray-400 {
+  &:hover {
+    background-color: var(--gray-gray-400) !important;
+  }
+}
+
+.hover-bg-gray-300 {
+  &:hover {
+    background-color: var(--gray-gray-300) !important;
+  }
+}
+
 .radius-2 {
   border-radius: 2px;
 }
@@ -607,6 +619,18 @@ a.h3 {
 .px-30 {
   padding-left: 30px;
   padding-right: 30px;
+}
+
+.pl-3 {
+  padding-left: 16px;
+}
+
+.pl-4 {
+  padding-left: 24px;
+}
+
+.pr-3 {
+  padding-right: 16px;
 }
 
 .pt-20 {
@@ -983,5 +1007,42 @@ a.h3 {
       opacity: 1;
       visibility: visible;
     }
+  }
+}
+
+.sub-menu {
+  position: absolute;
+  background: var(--bootstrap-white);
+  z-index: 1;
+  left: 0;
+
+  &-l {
+    border: 1px solid var(--gray-gray-200);
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    width: 200px;
+  }
+
+  &-r {
+    width: 400px;
+  }
+}
+
+.box-shadow-menu {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.12);
+}
+
+.menu-has-children {
+  position: relative;
+}
+.max-h-270 {
+  max-height: 270px;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    background-color: var(--gray-gray-100);
+    width: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--gray-gray-400);
   }
 }
