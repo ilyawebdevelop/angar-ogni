@@ -16654,6 +16654,12 @@ a.h3 {
   background: var(--bootstrap-white);
   z-index: 1;
   left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+.sub-menu.active {
+  opacity: 1;
+  visibility: visible;
 }
 .sub-menu-l {
   border: 1px solid var(--gray-gray-200);
@@ -16935,6 +16941,9 @@ a.h3 {
   background-size: 16px;
   background-position: right 12px center;
   background-repeat: no-repeat;
+}
+.headerNav > ul > li.menu-has-children > a.active {
+  background-color: var(--gray-gray-200);
 }
 .headerNav > ul > li > a {
   padding: 8px 12px;

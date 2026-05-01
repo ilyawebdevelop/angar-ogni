@@ -1015,6 +1015,12 @@ a.h3 {
   background: var(--bootstrap-white);
   z-index: 1;
   left: 0;
+  opacity: 0;
+  visibility: hidden;
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
 
   &-l {
     border: 1px solid var(--gray-gray-200);

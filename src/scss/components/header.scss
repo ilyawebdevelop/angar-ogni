@@ -31,6 +31,9 @@
             background-size: 16px;
             background-position: right 12px center;
             background-repeat: no-repeat;
+            &.active {
+              background-color: var(--gray-gray-200);
+            }
           }
         }
         &>a {

@@ -128,3 +128,16 @@ searchInputArray.forEach(el => {
   });
 
 });
+
+
+
+let menuLinkArray = document.querySelectorAll('.menu-has-children>a');
+menuLinkArray.forEach(el => {
+  el.addEventListener('click', (e) => {
+    e.preventDefault();
+    let menu = el.closest('.menu-has-children').querySelector('.sub-menu');
+    el.classList.toggle('active');
+    menu.classList.toggle('active');
+    console.log(el);
+  });
+});
