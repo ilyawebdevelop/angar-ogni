@@ -48,7 +48,8 @@
     &>ul {
       display: flex;
       column-gap: 4px;
-      @media(max-width: 991px){
+
+      @media(max-width: 991px) {
         flex-direction: column;
         padding-left: 15px;
         padding-right: 15px;
@@ -71,8 +72,17 @@
               font-size: 13px;
             }
 
+            @media(max-width: 991px) {
+              font-size: 14px;
+            }
+
             &.active {
               background-color: var(--gray-gray-200);
+
+              @media(max-width: 991px) {
+                background-image: url('@img/icons/arrow-up.svg');
+                background-color: transparent;
+              }
             }
           }
         }
@@ -87,6 +97,9 @@
 
           &:hover {
             background-color: var(--gray-gray-200);
+            @media(max-width: 991px){
+              background-color: transparent;
+            }
           }
         }
       }
@@ -152,5 +165,24 @@
 
   .swiper-slide {
     width: fit-content;
+  }
+}
+
+.mobileNavBody {
+  @media(max-width: 991px) {
+    display: none;
+  }
+}
+
+.mobileNavHead {
+  @media(max-width: 991px) {
+    background-repeat: no-repeat;
+    padding-right: 25px;
+    background-position: right 5px center;
+    font-size: 13px;
+    background-image: url('@img/icons/arrow-down.svg');
+  }
+  &.active {
+     background-image: url('@img/icons/arrow-up.svg');
   }
 }

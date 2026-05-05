@@ -177,6 +177,7 @@ searchInputArray.forEach(el => {
 
 
 const mediaQueryMin992 = window.matchMedia('(min-width: 992px)');
+const mediaQueryMax991 = window.matchMedia('(max-width: 991px)');
 if (mediaQueryMin992.matches) {
   function allMenuArray() {
     let menuLinkArray = document.querySelectorAll('.menu-has-children>a');
@@ -211,6 +212,12 @@ if (mediaQueryMin992.matches) {
       }
     });
 
+  });
+}
+if (mediaQueryMax991.matches) {
+  jQuery('.mobileNavHead').click(function () {
+    jQuery(this).toggleClass('active');
+    jQuery(this).siblings('.mobileNavBody').slideToggle();
   });
 }
 
