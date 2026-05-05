@@ -371,6 +371,18 @@ a.h3 {
 
 .gap-20 {
   gap: 20px;
+
+  &.gap-xl-12 {
+    @media(max-width: 1199px) {
+      gap: 12px;
+    }
+  }
+
+  &.gap-lg-20 {
+    @media(max-width: 991px) {
+      gap: 20px;
+    }
+  }
 }
 
 .bg-gray-100 {
@@ -420,11 +432,22 @@ a.h3 {
 .border-b-gray-300 {
   border-bottom: 1px solid var(--gray-gray-300);
 }
-
+.border-b-gray-400 {
+  border-bottom: 1px solid var(--gray-gray-400);
+}
+.border-b-gray-lg-400 {
+  @media(max-width: 991px){
+     border-bottom: 1px solid var(--gray-gray-400);
+  }
+}
 .border-b-gray-700 {
   border-bottom: 1px solid var(--gray-gray-700);
 }
-
+.border-t-gray-lg-400 {
+  @media(max-width: 991px){
+    border-top: 1px solid var(--gray-gray-400);
+  }
+}
 .color-bootstrap-white {
   color: var(--bootstrap-white);
 }
@@ -1017,6 +1040,16 @@ a.h3 {
   left: 0;
   opacity: 0;
   visibility: hidden;
+  display: flex;
+  transition: opacity .2s linear, visibility .2s linear;
+
+  @media(max-width: 991px) {
+    position: unset;
+    visibility: visible;
+    opacity: 1;
+    display: none;
+  }
+
   &.active {
     opacity: 1;
     visibility: visible;
@@ -1041,13 +1074,16 @@ a.h3 {
 .menu-has-children {
   position: relative;
 }
+
 .max-h-270 {
   max-height: 270px;
   overflow-y: auto;
+
   &::-webkit-scrollbar {
     background-color: var(--gray-gray-100);
     width: 4px;
   }
+
   &::-webkit-scrollbar-thumb {
     background-color: var(--gray-gray-400);
   }

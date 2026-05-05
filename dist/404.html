@@ -23,7 +23,7 @@
     <div class="swiper headerMarquee">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <div class="d-flex header-marquee-item gap-12">
+          <div class="d-flex align-items-center header-marquee-item gap-12">
             <div class="header-marquee-item-cat">
               ЭКОНОМИКА
             </div>
@@ -33,7 +33,7 @@
           </div>
         </div>
         <div class="swiper-slide">
-          <div class="d-flex header-marquee-item gap-12">
+          <div class="d-flex align-items-center header-marquee-item gap-12">
             <div class="header-marquee-item-cat">
               БЕЗОПАСНОСТЬ
             </div>
@@ -43,7 +43,7 @@
           </div>
         </div>
         <div class="swiper-slide">
-          <div class="d-flex header-marquee-item gap-12">
+          <div class="d-flex align-items-center header-marquee-item gap-12">
             <div class="header-marquee-item-cat">
               ЭКОНОМИКА
             </div>
@@ -53,7 +53,7 @@
           </div>
         </div>
         <div class="swiper-slide">
-          <div class="d-flex header-marquee-item gap-12">
+          <div class="d-flex align-items-center header-marquee-item gap-12">
             <div class="header-marquee-item-cat">
               БЕЗОПАСНОСТЬ
             </div>
@@ -68,15 +68,35 @@
   </div>
   <div class="headerB">
     <div class="container">
-      <div class="d-flex align-items-center gap-4 justify-content-between">
+      <div class="d-flex align-items-center gap-2 gap-xl-3 gap-xxl-4 justify-content-between">
         <a href="#" class="headerLogo logo">
           <img src="img/admin/logo/logo.svg" alt="logo">
         </a>
         <nav class="headerNav">
+          <div class="border-b-gray-lg-400 d-block d-lg-none">
+            <div class="container">
+              <div class="d-flex justify-content-between gap-3 py-10">
+                <a href="#" class="headerLogo logo">
+                  <img src="img/admin/logo/logo.svg" alt="logo">
+                </a>
+                <div class="d-flex align-items-center gap-20">
+                  <button class="headerSearchBtn" type="button">
+                    <img src="img/icons/search.svg" alt="icon">
+                  </button>
+                  <div class="sep"></div>
+                  <div class="headerNavClose" id="headerNavMobileClose">
+                    <img src="img/icons/close.svg" alt="icon">
+                  </div><!-- /Hamburger Menu -->
+                </div>
+              </div>
+            </div>
+
+          </div>
+
           <ul>
             <li class="menu-has-children">
               <a href="#">Новости</a>
-              <div class="sub-menu radius-2 d-flex box-shadow-menu">
+              <div class="sub-menu radius-2 box-shadow-menu">
                 <div class="sub-menu-l p-4">
                   <h6 class="mb-3">Рубрики</h6>
                   <ul>
@@ -100,7 +120,7 @@
                     </li>
                   </ul>
                 </div>
-                <div class="sub-menu-r">
+                <div class="sub-menu-r d-none d-lg-block">
                   <a href="#"
                     class="d-flex justify-content-between gap-10 align-items-center pl-4 pr-3 bg-gray-100 py-3 border-b-gray-300 hover-bg-gray-400">
                     <span class="fw-semibold h6 mb-0">Администрация округа </span>
@@ -156,17 +176,95 @@
               </div>
             </li>
             <li><a href="#">Видео</a></li>
-            <li class="menu-has-children"><a href="#">Номера газет</a></li>
-            <li class="menu-has-children"><a href="#">Официальный отдел</a></li>
+            <li class="menu-has-children">
+              <a href="#">
+                Номера газет
+              </a>
+              <div class="sub-menu radius-2 box-shadow-menu">
+                <div class="sub-menu-l p-4">
+                  <ul>
+                    <li>
+                      <a class="py-2 pl-3 d-block hover-opacity" href="#">2023 г.</a>
+                    </li>
+                    <li>
+                      <a class="py-2 pl-3 d-block hover-opacity" href="#">2024 г.</a>
+                    </li>
+                    <li>
+                      <a class="py-2 pl-3 d-block hover-opacity" href="#">2025 г.</a>
+                    </li>
+                    <li>
+                      <a class="py-2 pl-3 d-block hover-opacity" href="#">2026 г.</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="menu-has-children">
+              <a href="#">Официальный отдел</a>
+              <div class="sub-menu radius-2 box-shadow-menu">
+                <div class="sub-menu-l p-4">
+                  <h6 class="mb-3">Разделы</h6>
+                  <ul>
+                    <li>
+                      <a class="py-2 pl-3 d-block hover-opacity" href="#">раздел 1</a>
+                    </li>
+                    <li>
+                      <a class="py-2 pl-3 d-block hover-opacity" href="#">раздел 2</a>
+                    </li>
+                    <li>
+                      <a class="py-2 pl-3 d-block hover-opacity" href="#">раздел 3</a>
+                    </li>
+                    <li>
+                      <a class="py-2 pl-3 d-block hover-opacity" href="#">раздел 4</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
           </ul>
+
+          <div class="border-t-gray-lg-400 py-3 d-block d-lg-none">
+            <div class="container">
+              <div class="d-flex align-items-center justify-content-between gap-3">
+                <div class="socials d-block d-lg-none">
+                  <ul class="d-flex align-items-center gap-2">
+                    <li>
+                      <a href="#" target="_blank" rel="nofollow">
+                        <img src="img/admin/socials/vk.svg" alt="icon">
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" target="_blank" rel="nofollow">
+                        <img src="img/admin/socials/max.svg" alt="icon">
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" target="_blank" rel="nofollow">
+                        <img src="img/admin/socials/ok.svg" alt="icon">
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" target="_blank" rel="nofollow">
+                        <img src="img/admin/socials/tg.svg" alt="icon">
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <button class="button button--blue d-flex d-lg-none">
+                  Сообщить новость
+                </button>
+              </div>
+            </div>
+          </div>
+
         </nav>
-        <div class="d-flex gap-20 align-items-center">
+        <div class="d-flex gap-20 gap-xl-12 gap-lg-20 align-items-center">
           <button class="headerSearchBtn" type="button">
             <img src="img/icons/search.svg" alt="icon">
           </button>
           <div class="sep"></div>
-          <div class="socials">
-            <ul class="d-flex align-items-center gap-2">
+          <div class="socials d-none d-lg-block">
+            <ul class="d-flex align-items-center gap-1 gap-xl-2">
               <li>
                 <a href="#" target="_blank" rel="nofollow">
                   <img src="img/admin/socials/vk.svg" alt="icon">
@@ -189,9 +287,14 @@
               </li>
             </ul>
           </div>
-          <button class="button button--blue">
+          <button class="button button--blue d-none d-lg-flex">
             Сообщить новость
           </button>
+          <div class="hamburger" id="toggle">
+            <div class="top-bun"></div>
+            <div class="meat"></div>
+            <div class="bottom-bun"></div>
+          </div><!-- /Hamburger Menu -->
         </div>
       </div>
 
@@ -245,7 +348,7 @@
         <a href="#footer" class="button button-gray-800 gap-2 footerActionBtn" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
           Меню
           <svg>
-            <use xlink:href="img/icons/icons.svg#"></use>
+            <use xlink:href="img/icons/icons.svg#btn-arrow"></use>
           </svg>
         </a>
         <div class="socials">
