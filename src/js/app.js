@@ -122,15 +122,33 @@ sortBtn?.addEventListener('click', () => {
   sortBlock.classList.toggle('active');
 });
 
+let sortBlockClose = document.querySelector('.sortBlockClose');
+sortBlockClose?.addEventListener('click', () => {
+  sortBlock.classList.remove('active');
+});
 
+let filterBtn = document.querySelector('.filterBtn');
+let filterBlock = document.querySelector('.filter-action');
+filterBtn?.addEventListener('click', () => {
+  filterBlock.classList.toggle('active');
+});
+let filterBlockClose = document.querySelector('.filterBlockClose');
+filterBlockClose?.addEventListener('click', () => {
+  filterBlock.classList.remove('active');
+});
 
 document.addEventListener('click', e => {
   let target = e.target;
   let its_sort_btn = target == sortBtn || sortBtn?.contains(target);
   let its_sort_block = target == sortBlock || sortBlock?.contains(target);
+  let its_filter_btn = target == filterBtn || filterBtn?.contains(target);
+  let its_filter_block = target == filterBlock || filterBlock?.contains(target);
 
   if (!its_sort_btn && !its_sort_block) {
     sortBlock?.classList.remove('active');
+  }
+  if (!its_filter_btn && !its_filter_block) {
+    filterBlock?.classList.remove('active');
   }
 });
 
