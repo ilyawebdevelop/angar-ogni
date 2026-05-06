@@ -87,13 +87,20 @@
       border: 1px solid var(--gray-gray-400);
 
       &:hover {
-        background-color: var(--gray-gray-400);
+        background-color: var(--gray-gray-400) !important;
       }
     }
   }
 
   &.h-44 {
     height: 44px;
+  }
+
+  &.fz-385-12 {
+    @media(max-width: 385px) {
+      font-size: 12px;
+      line-height: 16px;
+    }
   }
 
   svg {
@@ -118,5 +125,13 @@
     svg {
       transform: rotate(180deg);
     }
+  }
+}
+.filterBtn, .sortBtn {
+  padding-left: 12px;
+  padding-right: 12px;
+  img {
+    width: 16px;
+    flex-shrink: 0;
   }
 }

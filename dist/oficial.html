@@ -300,65 +300,105 @@
   </div>
 </header>
 		<main class="main">
-			<section class="sect">
+			<section class="sect pageHead">
   <div class="container">
     <h1 class="h1 mb-3 pb-0 pb-lg-1">
       Официальный отдел
     </h1>
 
-    <div class="d-flex gap-4 justify-content-between mb-20 position-relative">
-      <div class="d-flex align-items-center gap-2">
-        <div class="selectW">
-          <select class="formSelect select-field" name="otdel_select" id="otdel_select" style="width: 160px;">
-            <option value="0">Отдел</option>
-            <option value="1">2 Отдел</option>
-            <option value="2">2025</option>
-            <option value="3">2026</option>
-          </select>
-        </div>
-        <div class="selectW">
-          <select class="formSelect select-field" name="doc_select" id="doc_select" style="width: 160px;">
-            <option value="0">Тип документа</option>
-            <option value="1">Тип документа 2</option>
-            <option value="2">2025</option>
-            <option value="3">2026</option>
-          </select>
-        </div>
-        <div class="searchW">
-          <input type="search" class="formInput formInput--search bg-gray-100 border-b-gray-300 w-200"
-            placeholder="Поиск">
-        </div>
-        <div class="inputW">
-          <input type="text" class="formInput formInput--calendar calendar bg-gray-100 border-b-gray-300 w-140"
-            placeholder="Дата">
-        </div>
-        <div class="selectW">
-          <select class="formSelect select-field" name="year_select" id="year_select" style="width: 120px;">
-            <option value="0">Год </option>
-            <option value="1">2024</option>
-            <option value="2">2025</option>
-            <option value="3">2026</option>
-          </select>
-        </div>
+    <div class="d-flex flex-column flex-lg-row gap-2 gap-lg-4 justify-content-between mb-20 mb-lg-10 position-relative">
+
+
+      <div class="searchW w-lg-100 d-block d-lg-none">
+        <input type="search" class="formInput formInput--search bg-gray-100 border-b-gray-300 w-400 w-lg-100"
+          placeholder="Поиск по номеру или дате выпуска">
       </div>
-      <button class="button button-transparent d-flex gap-2 sortBtn" type="button">
-        <span class="color-gray-600">Сортировка</span>
-        <img src="img/icons/sort.svg" alt="icon">
-      </button>
-      <div class="sortBlock border-gray-400 radius-2 p-3">
-        <ul>
-          <li>
-            <a href="#">
-              По дате публикации
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              По количеству просмотров
-            </a>
-          </li>
-        </ul>
+
+      <div class="filter-action">
+        <div class="d-flex d-lg-none gap-3 justify-content-between mb-4">
+          <div class="fz-20 fw-semibold">
+            Фильтры
+          </div>
+          <button class="filterBlockClose" type="button">
+            <img src="img/icons/close.svg" alt="icon">
+          </button>
+        </div>
+        <div class="d-flex filterSelectGrid align-items-center gap-2 flex-column flex-lg-row">
+          <div class="selectW">
+            <select class="formSelect select-field" name="otdel_select" id="otdel_select" style="width: 160px;">
+              <option value="0">Отдел</option>
+              <option value="1">2 Отдел</option>
+              <option value="2">2025</option>
+              <option value="3">2026</option>
+            </select>
+          </div>
+          <div class="selectW d-none d-lg-block">
+            <select class="formSelect select-field" name="doc_select" id="doc_select" style="width: 160px;">
+              <option value="0">Тип документа</option>
+              <option value="1">Тип документа 2</option>
+              <option value="2">2025</option>
+              <option value="3">2026</option>
+            </select>
+          </div>
+          <div class="searchW d-none d-lg-block">
+            <input type="search" class="formInput formInput--search bg-gray-100 border-b-gray-300 w-200"
+              placeholder="Поиск">
+          </div>
+          <div class="inputW w-lg-100">
+            <input type="text" class="formInput formInput--calendar calendar bg-gray-100 border-b-gray-300 w-140 w-140-lg-100"
+              placeholder="Дата">
+          </div>
+          <div class="selectW mb-3 mb-lg-0">
+            <select class="formSelect select-field" name="year_select" id="year_select" style="width: 120px;">
+              <option value="0">Год </option>
+              <option value="1">2024</option>
+              <option value="2">2025</option>
+              <option value="3">2026</option>
+            </select>
+          </div>
+        </div>
+        <button class="button button--blue d-flex d-lg-none mb-2 w-100">
+          Применить
+        </button>
+        <button class="button button-transparent-gray-400 d-flex d-lg-none mb-2 w-100">
+          Сбросить все
+        </button>
+
       </div>
+
+      <div class="d-flex justify-content-between">
+        <button class="button button-transparent d-flex d-lg-none gap-2 filterBtn" type="button">
+          <img src="img/icons/filter.svg" alt="icon">
+        </button>
+        <button class="button button-transparent d-flex gap-2 sortBtn" type="button">
+  <span class="color-gray-600 d-none d-lg-block">Сортировка</span>
+  <img src="img/icons/sort.svg" alt="icon">
+</button>
+
+<div class="sortBlock border-gray-400 radius-2 p-3">
+  <div class="d-flex d-lg-none gap-3 justify-content-between mb-4">
+    <div class="fz-20 fw-semibold">
+      Сортировка
+    </div>
+    <button class="sortBlockClose" type="button">
+      <img src="img/icons/close.svg" alt="icon">
+    </button>
+  </div>
+  <ul>
+    <li>
+      <a href="#">
+        По дате публикации
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        По количеству просмотров
+      </a>
+    </li>
+  </ul>
+</div>
+      </div>
+
     </div>
 
     <div class="bg-gray-100 p-20 radius-2 mb-1">
@@ -600,7 +640,7 @@
     </div>
     <div class="footerB">
       <div class="container">
-        <div class="d-flex flex-column justify-content-between gap-3 gap-lg-4">
+        <div class="d-flex flex-column flex-sm-row justify-content-between gap-3 gap-lg-4">
           <div class="color-gray-400">
             © 2026 МАУ Редакция «Ангарские огни»
           </div>
@@ -630,7 +670,7 @@
 
       <div class="newsCard newsCard--row bg-gray-100 d-flex mb-2 radius-2">
         <a href="#"
-          class="newsCardImage radius-2 bg-no-repeat bg-cover hover-opacity h-160 d-flex flex-column justify-content-center align-items-center position-relative"
+          class="newsCardImage radius-2 bg-no-repeat bg-cover hover-opacity h-160 h-160-sm-235 d-flex flex-column justify-content-center align-items-center position-relative"
           style="background-image: url('img/admin/news/image-3.jpg');">
         </a>
         <div class="newsCardContent px-20 py-20 d-flex flex-column flex-1">
