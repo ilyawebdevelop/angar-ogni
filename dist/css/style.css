@@ -17205,14 +17205,24 @@ a.h3 {
   width: 280px;
 }
 .socials-wrap ul li a:hover {
-  background-color: var(--gray-gray-300);
+  background-color: var(--brand-primary);
 }
-.socials-wrap ul li a.bg-brand-primary:hover {
-  background-color: var(--gray-gray-700);
+.socials-wrap ul li a:hover span {
+  color: #fff;
+}
+.socials-wrap ul li a:hover svg {
+  stroke: #fff;
 }
 .socials-wrap ul li img {
   width: 24px;
   flex-shrink: 0;
+}
+.socials-wrap ul li svg {
+  width: 24px;
+  height: 24px;
+  fill: transparent;
+  stroke: #000;
+  stroke-width: 1.5px;
 }
 
 .socials-logo {

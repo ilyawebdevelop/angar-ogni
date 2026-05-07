@@ -1567,19 +1567,28 @@ a.h3 {
     li {
       a {
         &:hover {
-          background-color: var(--gray-gray-300);
-        }
+          background-color: var(--brand-primary);
 
-        &.bg-brand-primary {
-          &:hover {
-            background-color: var(--gray-gray-700);
+          span {
+            color: #fff;
+          }
+          svg {
+            stroke: #fff;
           }
         }
+    
       }
 
       img {
         width: 24px;
         flex-shrink: 0;
+      }
+      svg {
+        width: 24px;
+        height: 24px;
+        fill: transparent;
+        stroke: #000;
+        stroke-width: 1.5px;
       }
     }
   }

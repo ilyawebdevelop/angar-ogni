@@ -202,7 +202,7 @@ if (mediaQueryMin992.matches) {
       let menu = el.closest('.menu-has-children').querySelector('.sub-menu');
       el.classList.toggle('active');
       menu.classList.toggle('active');
-      console.log(el);
+      // console.log(el);
     });
   });
 
