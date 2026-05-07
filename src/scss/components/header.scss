@@ -55,6 +55,15 @@
         padding-right: 15px;
         padding-top: 15px;
         padding-bottom: 15px;
+        max-width: 720px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      @media(max-width: 767px) {
+        max-width: 540px;
       }
 
       &>li {
@@ -63,12 +72,12 @@
             padding-right: 36px;
             background-image: url('@img/icons/arrow-down.svg');
             background-size: 16px;
-            background-position: right 12px center;
+            background-position: right 15px center;
             background-repeat: no-repeat;
 
             @media(max-width: 1199px) {
               padding-right: 25px;
-              background-position: right 5px center;
+              background-position: right 15px center;
               font-size: 13px;
             }
 
@@ -97,7 +106,8 @@
 
           &:hover {
             background-color: var(--gray-gray-200);
-            @media(max-width: 991px){
+
+            @media(max-width: 991px) {
               background-color: transparent;
             }
           }
@@ -178,11 +188,12 @@
   @media(max-width: 991px) {
     background-repeat: no-repeat;
     padding-right: 25px;
-    background-position: right 5px center;
+    background-position: right 15px center;
     font-size: 13px;
     background-image: url('@img/icons/arrow-down.svg');
   }
+
   &.active {
-     background-image: url('@img/icons/arrow-up.svg');
+    background-image: url('@img/icons/arrow-up.svg');
   }
 }

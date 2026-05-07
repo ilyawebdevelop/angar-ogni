@@ -1,5 +1,10 @@
 // Footer
 .footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  transition: transform .2s linear;
+  transform: translateY(0);
   &C {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -21,6 +26,12 @@
       }
     }
   } 
+  &.is-hidden {
+    transform: translateY(100%);
+  }
+  @media(max-width: 991px){
+    display: none;
+  }
 }
 
 .develop {

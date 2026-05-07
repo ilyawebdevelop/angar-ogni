@@ -57,16 +57,6 @@ new Swiper($('.headerMarquee')[0], {
   },
 });
 
-const actionButton = document.querySelector('.footerActionBtn');
-actionButton?.addEventListener('click', () => {
-  setTimeout(function () {
-    // Прокручиваем к самому низу документа
-    window.scrollTo({
-      top: document.body.scrollHeight, // Прокрутить до конца документа
-      behavior: 'smooth' // Плавная анимация прокрутки
-    });
-  }, 300); // 1000 миллисекунд = 1 секунда
-});
 
 window.addEventListener('resize', () => {
   $('.select-field').select2({
@@ -231,6 +221,61 @@ if (mediaQueryMin992.matches) {
     });
 
   });
+
+  const footer = document.querySelector('.footer');
+  const footerActionBlock = document.querySelector('.footerAction');
+
+  if (!footer) {
+    console.error('Элемент с классом .footer не найден.');
+  }
+  if (!footerActionBlock) {
+    console.warn('Элемент с классом .footerAction не найден. Условие скрытия футера не будет работать.');
+  }
+
+  let lastScrollTop = 0;
+  let footerIsHidden = false;
+
+  function handleScroll() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollHeight = document.body.scrollHeight; // Общая высота документа
+    const windowHeight = window.innerHeight; // Высота видимой области окна
+
+    // Определяем, достигли ли мы самого низа экрана (с небольшим запасом, например 50px)
+    const isAtBottomOfScreen = scrollTop + windowHeight >= scrollHeight - 50;
+
+    const isFooterActionShown = footerActionBlock && footerActionBlock.classList.contains('show');
+
+    if (scrollTop > lastScrollTop && scrollTop > 100) { // Скролл вниз
+      // Скрываем футер, ТОЛЬКО ЕСЛИ:
+      // 1. Он еще не скрыт (!footerIsHidden)
+      // 2. Блок footerAction НЕ отображается (!isFooterActionShown)
+      // 3. Мы НЕ находимся в самом низу экрана (!!!isAtBottomOfScreen)
+      if (!footerIsHidden && !isFooterActionShown && !isAtBottomOfScreen) {
+        footer.classList.add('is-hidden');
+        footerIsHidden = true;
+      }
+      // Если мы внизу экрана, но футер все еще был скрыт, показываем его
+      else if (isAtBottomOfScreen && footerIsHidden) {
+        footer.classList.remove('is-hidden');
+        footerIsHidden = false;
+      }
+    } else if (scrollTop < lastScrollTop || scrollTop <= 100) { // Скролл вверх или начало страницы
+      // Показываем футер, ЕСЛИ он был скрыт
+      // (Нет необходимости проверять footerAction, так как при скролле вверх он должен быть виден)
+      if (footerIsHidden) {
+        footer.classList.remove('is-hidden');
+        footerIsHidden = false;
+      }
+    }
+
+    lastScrollTop = scrollTop;
+  }
+
+  window.addEventListener('scroll', handleScroll);
+
+  // Изначальная проверка состояния
+  handleScroll();
+
 }
 if (mediaQueryMax991.matches) {
   jQuery('.mobileNavHead').click(function () {
@@ -238,7 +283,5 @@ if (mediaQueryMax991.matches) {
     jQuery(this).siblings('.mobileNavBody').slideToggle();
   });
 }
-
-
 
 

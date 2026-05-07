@@ -15933,6 +15933,12 @@ section {
   min-height: 100%;
   position: relative;
   background-color: #fff;
+  padding-bottom: 51px;
+}
+@media (max-width: 991px) {
+  .wrapper {
+    padding-bottom: 0;
+  }
 }
 
 .flex-1 {
@@ -16282,6 +16288,10 @@ a.h3 {
   .border-b-lg-none {
     border-bottom: none;
   }
+}
+
+.border-t-gray-400 {
+  border-top: 1px solid var(--gray-gray-400);
 }
 
 @media (max-width: 991px) {
@@ -16668,6 +16678,7 @@ a.h3 {
 
 .select2-dropdown {
   border-color: transparent;
+  border: 1px solid var(--gray-gray-300);
 }
 
 .select2-container--default .select2-selection--single {
@@ -17523,19 +17534,29 @@ a.h3 {
     padding-right: 15px;
     padding-top: 15px;
     padding-bottom: 15px;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (max-width: 767px) {
+  .headerNav > ul {
+    max-width: 540px;
   }
 }
 .headerNav > ul > li.menu-has-children > a {
   padding-right: 36px;
   background-image: url("../img/icons/arrow-down.svg");
   background-size: 16px;
-  background-position: right 12px center;
+  background-position: right 15px center;
   background-repeat: no-repeat;
 }
 @media (max-width: 1199px) {
   .headerNav > ul > li.menu-has-children > a {
     padding-right: 25px;
-    background-position: right 5px center;
+    background-position: right 15px center;
     font-size: 13px;
   }
 }
@@ -17625,7 +17646,7 @@ a.h3 {
   .mobileNavHead {
     background-repeat: no-repeat;
     padding-right: 25px;
-    background-position: right 5px center;
+    background-position: right 15px center;
     font-size: 13px;
     background-image: url("../img/icons/arrow-down.svg");
   }
@@ -17634,6 +17655,13 @@ a.h3 {
   background-image: url("../img/icons/arrow-up.svg");
 }
 
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  transition: transform 0.2s linear;
+  transform: translateY(0);
+}
 .footerC {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -17644,6 +17672,14 @@ a.h3 {
 }
 .footer .socials ul li a:hover {
   opacity: 0.85;
+}
+.footer.is-hidden {
+  transform: translateY(100%);
+}
+@media (max-width: 991px) {
+  .footer {
+    display: none;
+  }
 }
 
 .develop:hover {
