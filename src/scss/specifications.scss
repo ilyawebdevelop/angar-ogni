@@ -202,9 +202,15 @@ section {
   position: relative;
   background-color: #fff;
   padding-bottom: 51px;
+  padding-top: 119px;
+
+  @media(max-width: 1199px) {
+    padding-top: 111px;
+  }
 
   @media(max-width: 991px) {
     padding-bottom: 0;
+    padding-top: 119px;
   }
 }
 
@@ -1572,17 +1578,19 @@ a.h3 {
           span {
             color: #fff;
           }
+
           svg {
             stroke: #fff;
           }
         }
-    
+
       }
 
       img {
         width: 24px;
         flex-shrink: 0;
       }
+
       svg {
         width: 24px;
         height: 24px;

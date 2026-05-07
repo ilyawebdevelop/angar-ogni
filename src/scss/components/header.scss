@@ -1,5 +1,12 @@
 // Header
 .header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  top: 0;
+  z-index: 44;
+
   &T {
     background: var(--gray-gray-800);
     padding-top: 10px;
@@ -7,9 +14,13 @@
   }
 
   &B {
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border-bottom: 1px solid var(--gray-gray-300);
+    width: 100%;
+    background-color: #fff;
+    z-index: 44;
+    top: 0;
   }
 
   .logo {
@@ -33,7 +44,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
+      height: 100vh;
       overflow-y: scroll;
       z-index: 2;
       background-color: #fff;
@@ -77,12 +88,13 @@
 
             @media(max-width: 1199px) {
               padding-right: 25px;
-              background-position: right 15px center;
+              background-position: right 5px center;
               font-size: 13px;
             }
 
             @media(max-width: 991px) {
               font-size: 14px;
+              background-position: right 15px center;
             }
 
             &.active {
@@ -197,3 +209,19 @@
     background-image: url('@img/icons/arrow-up.svg');
   }
 }
+
+.header__fxd._fixed {
+  position: fixed;
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+.header__fxd._show {
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
