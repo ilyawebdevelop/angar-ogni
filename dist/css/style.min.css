@@ -17049,7 +17049,7 @@ a.h3 {
 .sub-menu {
   position: absolute;
   background: var(--bootstrap-white);
-  z-index: 1;
+  z-index: 2;
   left: 0;
   opacity: 0;
   visibility: hidden;
