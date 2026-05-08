@@ -69,235 +69,257 @@
   <div class="headerB header__fxd" id="headerB">
     <div class="container">
 
-      <div class="d-flex align-items-center gap-2 gap-xl-3 gap-xxl-4 justify-content-between">
+      <div class="d-flex align-items-center gap-2 gap-xl-3 gap-xxl-4 justify-content-between position-lg-relative">
         <a href="#" class="headerLogo logo">
           <img src="img/admin/logo/logo.svg" alt="logo">
         </a>
-        <nav class="headerNav">
-          <div class="border-b-gray-lg-400 d-block d-lg-none">
-            <div class="container">
-              <div class="d-flex justify-content-between gap-3 py-10">
-                <a href="#" class="headerLogo logo">
-                  <img src="img/admin/logo/logo.svg" alt="logo">
-                </a>
-                <div class="d-flex align-items-center gap-20">
-                  <button class="headerSearchBtn" type="button">
-                    <img src="img/icons/search.svg" alt="icon">
+
+        <div class="headerNavW">
+
+          <nav class="headerNav">
+
+            <div class="border-b-gray-lg-400 d-block d-lg-none">
+              <div class="container">
+                <div class="d-flex justify-content-between gap-3 py-10">
+                  <a href="#" class="headerLogo logo">
+                    <img src="img/admin/logo/logo.svg" alt="logo">
+                  </a>
+                  <div class="d-flex align-items-center gap-20">
+                    <a class="burger-search-btn" type="button">
+                      <img src="img/icons/search.svg" alt="icon">
+                    </a>
+                    <div class="sep"></div>
+                    <div class="headerNavClose" id="headerNavMobileClose">
+                      <img src="img/icons/close.svg" alt="icon">
+                    </div><!-- /Hamburger Menu -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="border-b-gray-400 py-3 d-block d-lg-none">
+              <div class="container">
+                <div class="d-flex align-items-center justify-content-between gap-3">
+                  <div class="socials d-block d-lg-none">
+                    <ul class="d-flex align-items-center gap-2">
+                      <li>
+                        <a href="#" target="_blank" rel="nofollow">
+                          <img src="img/admin/socials/vk.svg" alt="icon">
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" rel="nofollow">
+                          <img src="img/admin/socials/max.svg" alt="icon">
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" rel="nofollow">
+                          <img src="img/admin/socials/ok.svg" alt="icon">
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" rel="nofollow">
+                          <img src="img/admin/socials/tg.svg" alt="icon">
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <button class="button button--blue d-flex d-lg-none" data-fancybox data-src="#modalNews">
+                    Сообщить новость
                   </button>
-                  <div class="sep"></div>
-                  <div class="headerNavClose" id="headerNavMobileClose">
-                    <img src="img/icons/close.svg" alt="icon">
-                  </div><!-- /Hamburger Menu -->
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="border-b-gray-400 py-3 d-block d-lg-none">
-            <div class="container">
-              <div class="d-flex align-items-center justify-content-between gap-3">
-                <div class="socials d-block d-lg-none">
-                  <ul class="d-flex align-items-center gap-2">
-                    <li>
-                      <a href="#" target="_blank" rel="nofollow">
-                        <img src="img/admin/socials/vk.svg" alt="icon">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" target="_blank" rel="nofollow">
-                        <img src="img/admin/socials/max.svg" alt="icon">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" target="_blank" rel="nofollow">
-                        <img src="img/admin/socials/ok.svg" alt="icon">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" target="_blank" rel="nofollow">
-                        <img src="img/admin/socials/tg.svg" alt="icon">
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <button class="button button--blue d-flex d-lg-none">
-                  Сообщить новость
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <ul>
-            <li class="menu-has-children">
-              <a class="mobileNavHead" href="#">Новости</a>
-              <div class="sub-menu radius-2 box-shadow-menu box-shadow-menu-lg-none mobileNavBody">
-                <div class="sub-menu-l px-0 px-lg-4 py-0 py-lg-4">
-                  <h6 class="mb-0 mb-lg-3 fw-lg-400 fz-lg-14 mobileNavHead px-4 px-lg-0 py-2 py-lg-0">Рубрики</h6>
-                  <ul class="mobileNavBody px-4 px-lg-0">
-                    <li>
-                      <a class="py-2 pl-3 d-block hover-opacity" href="#">Власть</a>
-                    </li>
-                    <li>
-                      <a class="py-2 pl-3 d-block hover-opacity" href="#">Экономика</a>
-                    </li>
-                    <li>
-                      <a class="py-2 pl-3 d-block hover-opacity" href="#">Безопасность</a>
-                    </li>
-                    <li>
-                      <a class="py-2 pl-3 d-block hover-opacity" href="#">Общество</a>
-                    </li>
-                    <li>
-                      <a class="py-2 pl-3 d-block hover-opacity" href="#">Спорт</a>
-                    </li>
-                    <li>
-                      <a class="py-2 pl-3 d-block hover-opacity" href="#">Культура</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="sub-menu-r">
-                  <a href="#"
-                    class="d-flex justify-content-between gap-10 align-items-center pl-4 pl-lg-21 pr-3 bg-gray-100 bg-lg-none py-2 py-lg-3 border-b-gray-300 hover-bg-gray-400 border-b-lg-none">
-                    <span class="fw-semibold h6 mb-0 fz-lg-14 fw-lg-400">Администрация округа </span>
-                    <svg
-                      style="width: 11px; height: 11px; fill: transparent; stroke: #495057; stroke-width: 1.5px; flex-shrink: 0;">
-                      <use xlink:href="img/icons/icons.svg#pag-right" class="d-none d-lg-block"></use>
-                    </svg>
-                  </a>
-                  <a href="#"
-                    class="d-flex justify-content-between gap-10 align-items-center pl-4 pl-lg-21 pr-3 bg-gray-100 bg-lg-none py-2 py-lg-3 border-b-gray-300 hover-bg-gray-400 border-b-lg-none">
-                    <span class="fw-semibold h6 mb-0 fz-lg-14 fw-lg-400">Дума округа </span>
-                    <svg
-                      style="width: 11px; height: 11px; fill: transparent; stroke: #495057; stroke-width: 1.5px; flex-shrink: 0;">
-                      <use xlink:href="img/icons/icons.svg#pag-right" class="d-none d-lg-block"></use>
-                    </svg>
-                  </a>
-                  <div class="d-block">
-                    <div
-                      class="d-flex justify-content-between gap-10 align-items-center pl-4 pl-lg-21 pr-3 py-2 py-lg-3 border-b-gray-300 border-b-lg-none mobileNavHead">
-                      <span class="fw-semibold h6 mb-0 fz-lg-14 fw-lg-400">Административные округа </span>
+            <ul>
+              <li class="menu-has-children">
+                <a class="mobileNavHead" href="#">Новости</a>
+                <div class="sub-menu radius-2 box-shadow-menu box-shadow-menu-lg-none mobileNavBody">
+                  <div class="sub-menu-l px-0 px-lg-4 py-0 py-lg-4">
+                    <h6 class="mb-0 mb-lg-3 fw-lg-400 fz-lg-14 mobileNavHead px-4 px-lg-0 py-2 py-lg-0">Рубрики</h6>
+                    <ul class="mobileNavBody px-4 px-lg-0">
+                      <li>
+                        <a class="py-2 pl-3 d-block hover-opacity" href="#">Власть</a>
+                      </li>
+                      <li>
+                        <a class="py-2 pl-3 d-block hover-opacity" href="#">Экономика</a>
+                      </li>
+                      <li>
+                        <a class="py-2 pl-3 d-block hover-opacity" href="#">Безопасность</a>
+                      </li>
+                      <li>
+                        <a class="py-2 pl-3 d-block hover-opacity" href="#">Общество</a>
+                      </li>
+                      <li>
+                        <a class="py-2 pl-3 d-block hover-opacity" href="#">Спорт</a>
+                      </li>
+                      <li>
+                        <a class="py-2 pl-3 d-block hover-opacity" href="#">Культура</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="sub-menu-r">
+                    <a href="#"
+                      class="d-flex justify-content-between gap-10 align-items-center pl-4 pl-lg-21 pr-3 bg-gray-100 bg-lg-none py-2 py-lg-3 border-b-gray-300 hover-bg-gray-400 border-b-lg-none">
+                      <span class="fw-semibold h6 mb-0 fz-lg-14 fw-lg-400">Администрация округа </span>
+                      <svg
+                        style="width: 11px; height: 11px; fill: transparent; stroke: #495057; stroke-width: 1.5px; flex-shrink: 0;">
+                        <use xlink:href="img/icons/icons.svg#pag-right" class="d-none d-lg-block"></use>
+                      </svg>
+                    </a>
+                    <a href="#"
+                      class="d-flex justify-content-between gap-10 align-items-center pl-4 pl-lg-21 pr-3 bg-gray-100 bg-lg-none py-2 py-lg-3 border-b-gray-300 hover-bg-gray-400 border-b-lg-none">
+                      <span class="fw-semibold h6 mb-0 fz-lg-14 fw-lg-400">Дума округа </span>
+                      <svg
+                        style="width: 11px; height: 11px; fill: transparent; stroke: #495057; stroke-width: 1.5px; flex-shrink: 0;">
+                        <use xlink:href="img/icons/icons.svg#pag-right" class="d-none d-lg-block"></use>
+                      </svg>
+                    </a>
+                    <div class="d-block">
+                      <div
+                        class="d-flex justify-content-between gap-10 align-items-center pl-4 pl-lg-21 pr-3 py-2 py-lg-3 border-b-gray-300 border-b-lg-none mobileNavHead">
+                        <span class="fw-semibold h6 mb-0 fz-lg-14 fw-lg-400">Административные округа </span>
+                      </div>
+                      <ul class="pl-4 pb-3 max-h-lg-100 mobileNavBody">
+                        <li>
+                          <a class="py-2 pl-3 d-block hover-opacity" href="#">Большереченский АО</a>
+                        </li>
+                        <li>
+                          <a class="py-2 pl-3 d-block hover-opacity" href="#">Голоустненский АО</a>
+                        </li>
+                        <li>
+                          <a class="py-2 pl-3 d-block hover-opacity" href="#">Гороховский АО</a>
+                        </li>
+                        <li>
+                          <a class="py-2 pl-3 d-block hover-opacity" href="#">Дзержинский АО</a>
+                        </li>
+                        <li>
+                          <a class="py-2 pl-3 d-block hover-opacity" href="#">Карлукский АО</a>
+                        </li>
+                        <li>
+                          <a class="py-2 pl-3 d-block hover-opacity" href="#">Листвянский АО</a>
+                        </li>
+                        <li>
+                          <a class="py-2 pl-3 d-block hover-opacity" href="#">Максимовский АО</a>
+                        </li>
+                        <li>
+                          <a class="py-2 pl-3 d-block hover-opacity" href="#">Большереченский АО</a>
+                        </li>
+                        <li>
+                          <a class="py-2 pl-3 d-block hover-opacity" href="#">Голоустненский АО</a>
+                        </li>
+                      </ul>
                     </div>
-                    <ul class="pl-4 pb-3 max-h-270 max-h-lg-100 mobileNavBody">
+                  </div>
+                </div>
+              </li>
+              <li><a href="#">Видео</a></li>
+              <li class="menu-has-children">
+                <a class="mobileNavHead" href="#">
+                  Номера газет
+                </a>
+                <div class="sub-menu radius-2 box-shadow-menu box-shadow-menu-lg-none mobileNavBody">
+                  <div class="sub-menu-l px-2 px-lg-4 py-0 py-lg-4">
+                    <ul>
                       <li>
-                        <a class="py-2 pl-3 d-block hover-opacity" href="#">Большереченский АО</a>
+                        <a class="py-2 pl-3 d-block hover-opacity" href="#">2023 г.</a>
                       </li>
                       <li>
-                        <a class="py-2 pl-3 d-block hover-opacity" href="#">Голоустненский АО</a>
+                        <a class="py-2 pl-3 d-block hover-opacity" href="#">2024 г.</a>
                       </li>
                       <li>
-                        <a class="py-2 pl-3 d-block hover-opacity" href="#">Гороховский АО</a>
+                        <a class="py-2 pl-3 d-block hover-opacity" href="#">2025 г.</a>
                       </li>
                       <li>
-                        <a class="py-2 pl-3 d-block hover-opacity" href="#">Дзержинский АО</a>
-                      </li>
-                      <li>
-                        <a class="py-2 pl-3 d-block hover-opacity" href="#">Карлукский АО</a>
-                      </li>
-                      <li>
-                        <a class="py-2 pl-3 d-block hover-opacity" href="#">Листвянский АО</a>
-                      </li>
-                      <li>
-                        <a class="py-2 pl-3 d-block hover-opacity" href="#">Максимовский АО</a>
-                      </li>
-                      <li>
-                        <a class="py-2 pl-3 d-block hover-opacity" href="#">Большереченский АО</a>
-                      </li>
-                      <li>
-                        <a class="py-2 pl-3 d-block hover-opacity" href="#">Голоустненский АО</a>
+                        <a class="py-2 pl-3 d-block hover-opacity" href="#">2026 г.</a>
                       </li>
                     </ul>
                   </div>
                 </div>
-              </div>
-            </li>
-            <li><a href="#">Видео</a></li>
-            <li class="menu-has-children">
-              <a class="mobileNavHead" href="#">
-                Номера газет
-              </a>
-              <div class="sub-menu radius-2 box-shadow-menu box-shadow-menu-lg-none mobileNavBody">
-                <div class="sub-menu-l px-2 px-lg-4 py-0 py-lg-4">
-                  <ul>
-                    <li>
-                      <a class="py-2 pl-3 d-block hover-opacity" href="#">2023 г.</a>
-                    </li>
-                    <li>
-                      <a class="py-2 pl-3 d-block hover-opacity" href="#">2024 г.</a>
-                    </li>
-                    <li>
-                      <a class="py-2 pl-3 d-block hover-opacity" href="#">2025 г.</a>
-                    </li>
-                    <li>
-                      <a class="py-2 pl-3 d-block hover-opacity" href="#">2026 г.</a>
-                    </li>
-                  </ul>
+              </li>
+              <li class="menu-has-children">
+                <a class="mobileNavHead" href="#">Официальный отдел</a>
+                <div class="sub-menu radius-2 box-shadow-menu box-shadow-menu-lg-none mobileNavBody">
+                  <div class="sub-menu-l px-0 px-lg-4 py-2 py-lg-4">
+                    <h6 class="mb-2 mb-lg-3 fw-lg-400 fz-lg-14 mobileNavHead px-4 px-lg-0">Разделы</h6>
+                    <ul class="mobileNavBody px-4 px-lg-0">
+                      <li>
+                        <a class="py-2 pl-3 d-block hover-opacity" href="#">раздел 1</a>
+                      </li>
+                      <li>
+                        <a class="py-2 pl-3 d-block hover-opacity" href="#">раздел 2</a>
+                      </li>
+                      <li>
+                        <a class="py-2 pl-3 d-block hover-opacity" href="#">раздел 3</a>
+                      </li>
+                      <li>
+                        <a class="py-2 pl-3 d-block hover-opacity" href="#">раздел 4</a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li class="menu-has-children">
-              <a class="mobileNavHead" href="#">Официальный отдел</a>
-              <div class="sub-menu radius-2 box-shadow-menu box-shadow-menu-lg-none mobileNavBody">
-                <div class="sub-menu-l px-0 px-lg-4 py-2 py-lg-4">
-                  <h6 class="mb-2 mb-lg-3 fw-lg-400 fz-lg-14 mobileNavHead px-4 px-lg-0">Разделы</h6>
-                  <ul class="mobileNavBody px-4 px-lg-0">
-                    <li>
-                      <a class="py-2 pl-3 d-block hover-opacity" href="#">раздел 1</a>
-                    </li>
-                    <li>
-                      <a class="py-2 pl-3 d-block hover-opacity" href="#">раздел 2</a>
-                    </li>
-                    <li>
-                      <a class="py-2 pl-3 d-block hover-opacity" href="#">раздел 3</a>
-                    </li>
-                    <li>
-                      <a class="py-2 pl-3 d-block hover-opacity" href="#">раздел 4</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-          </ul>
+              </li>
+            </ul>
 
-          <div class="border-t-gray-400 d-block d-lg-none py-4">
-            <div class="container">
-              <a class="mb-4 d-flex color-brand-primary" href="#">Контакты</a>
-              <a class="mb-4 d-flex color-brand-primary" href="#">О редакции</a>
-              <div class="fz-12 color-gray-600 mb-3">
-                Сетевое издание «Ангарские огни». Зарегистрировано Федеральной Службой по надзору в сфере связи,
-                информационных технологий и массовых коммуникаций, регистрационный номер и дата принятия решения о
-                регистрации: серия ЭЛ № ФС77-86895 от 16 февраля 2024 года. Учредитель: Муниципальное автономное
-                учреждение Иркутского муниципального округа «Редакция «Ангарские огни» (ИНН: 3827004060, ОГРН
-                1033802457215).
-              </div>
-              <div class="h2 mb-4 mb-lg-0">
-                16+
-              </div>
-              <a class="mb-4 d-flex color-brand-primary" href="#">Политика в отношении обработки персональных данных</a>
-              <div class="fz-12 color-gray-600 mb-3">
-                При перепечатке текстов либо ином использовании текстовых материалов с настоящего сайта на иных ресурсах
-                в сети Интернет гиперссылка на источник обязательна. Перепечатка либо иное использование текстовых
-                материалов с настоящего сайта в печатных СМИ возможно только с письменного согласия автора,
-                правообладателя. Фотографии, видеоматериалы, иные иллюстрации могут быть использованы только с
-                письменного согласия автора (правообладателя) и с обязательным указанием имени автора и источника
-                заимствования.
+            <div class="border-t-gray-400 d-block d-lg-none py-4">
+              <div class="container">
+                <a class="mb-4 d-flex color-brand-primary" href="#">Контакты</a>
+                <a class="mb-4 d-flex color-brand-primary" href="#">О редакции</a>
+                <div class="fz-12 color-gray-600 mb-3">
+                  Сетевое издание «Ангарские огни». Зарегистрировано Федеральной Службой по надзору в сфере связи,
+                  информационных технологий и массовых коммуникаций, регистрационный номер и дата принятия решения о
+                  регистрации: серия ЭЛ № ФС77-86895 от 16 февраля 2024 года. Учредитель: Муниципальное автономное
+                  учреждение Иркутского муниципального округа «Редакция «Ангарские огни» (ИНН: 3827004060, ОГРН
+                  1033802457215).
+                </div>
+                <div class="h2 mb-4 mb-lg-0">
+                  16+
+                </div>
+                <a class="mb-4 d-flex color-brand-primary" href="#">Политика в отношении обработки персональных
+                  данных</a>
+                <div class="fz-12 color-gray-600 mb-3">
+                  При перепечатке текстов либо ином использовании текстовых материалов с настоящего сайта на иных
+                  ресурсах
+                  в сети Интернет гиперссылка на источник обязательна. Перепечатка либо иное использование текстовых
+                  материалов с настоящего сайта в печатных СМИ возможно только с письменного согласия автора,
+                  правообладателя. Фотографии, видеоматериалы, иные иллюстрации могут быть использованы только с
+                  письменного согласия автора (правообладателя) и с обязательным указанием имени автора и источника
+                  заимствования.
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="py-4 border-t-gray-400 d-block d-lg-none">
-            <div class="container">
-              <div class="d-flex flex-column gap-3">
-                <div class="color-gray-700">
-                  © 2026 МАУ Редакция «Ангарские огни»
+            <div class="py-4 border-t-gray-400 d-block d-lg-none">
+              <div class="container">
+                <div class="d-flex flex-column gap-3">
+                  <div class="color-gray-700">
+                    © 2026 МАУ Редакция «Ангарские огни»
+                  </div>
+                  <a href="#" class="develop d-flex gap-2 align-items-center">
+                    <img src="img/icons/develop-gray-700.svg" alt="icon">
+                    <span class="color-gray-700">Разработка сайта - Вангер.рф</span>
+                  </a>
                 </div>
-                <a href="#" class="develop d-flex gap-2 align-items-center">
-                  <img src="img/icons/develop-gray-700.svg" alt="icon">
-                  <span class="color-gray-700">Разработка сайта - Вангер.рф</span>
-                </a>
               </div>
             </div>
-          </div>
 
-        </nav>
+
+
+          </nav>
+          <div class="search-action-field">
+            <div class="searchW w-100 position-relative">
+              <input type="search" class="formInput formInput--search bg-gray-100 border-b-gray-300 w-100"
+                placeholder="Поиск по сайту">
+              <button class="search-clear" type="button">
+                <img src="img/icons/search-clear.svg" alt="clear">
+              </button>
+              <button class="headerSearchEnter" type="button">
+                <img src="img/icons/enter.svg" alt="icon">
+              </button>
+            </div>
+          </div>
+        </div>
+
         <div class="d-flex gap-20 gap-xl-12 gap-lg-20 align-items-center">
           <button class="headerSearchBtn" type="button">
             <img src="img/icons/search.svg" alt="icon">
@@ -327,7 +349,7 @@
               </li>
             </ul>
           </div>
-          <button class="button button--blue d-none d-lg-flex">
+          <button class="button button--blue d-none d-lg-flex" data-fancybox data-src="#modalNews">
             Сообщить новость
           </button>
           <div class="hamburger" id="toggle">
@@ -1643,6 +1665,74 @@
         <span class="h6 color-brand-primary mb-0">Приложение 2</span>
         <img src="img/icons/open-icon.svg" alt="icon">
       </a>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- modalNews -->
+<div class="modal radius-2" id="modalNews">
+  <div class="modalInner">
+    <div class="modalHead mb-20">
+      <h3 class="h3 mb-0">Сообщить новость</h3>
+      <button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24" tabindex="-1">
+          <path d="M20 20L4 4m16 0L4 20"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="modalContent">
+
+      <div class="gap-20 inputGrid mb-20 mb-lg-16">
+        <div class="form-floating">
+          <input type="text" class="form-control formInput border-b-gray-300 bg-gray-100" id="newsName"
+            placeholder="Имя">
+          <label for="newsName">Имя</label>
+        </div>
+        <div class="form-floating">
+          <input type="tel" class="form-control formInput border-b-gray-300 bg-gray-100" id="newsTel"
+            placeholder="Телефон">
+          <label for="newsTel">Телефон</label>
+        </div>
+        <div class="form-floating">
+          <input type="email" class="form-control formInput border-b-gray-300 bg-gray-100" id="newsMail"
+            placeholder="Email">
+          <label for="newsMail">Email</label>
+        </div>
+        <div class="form-floating grid-col-12">
+          <textarea class="form-control formText border-b-gray-300 bg-gray-100 w-100" name="newsText" id="newsText"
+            placeholder="Текст новости" style="height: 96px;"></textarea>
+          <label for="newsText">Текст новости</label>
+        </div>
+      </div>
+
+      <div class="fileWrap mb-20 mb-lg-16">
+        <input class="fileInput" type="file" id="newsFile" hidden>
+        <label class="d-flex gap-2 align-items-center hover-opacity flex-wrap" for="newsFile">
+          <img src="img/icons/file.svg" alt="icon">
+          <span class="color-brand-primary fileOutput">Прикрепить фото или файл</span>
+          <span class="color-gray-600">(max. 200Mb)</span>
+        </label>
+      </div>
+
+      <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between">
+
+        <div class="agreement mb-4 mb-md-0">
+          <input id="news_agree_1" type="checkbox">
+          <label for="news_agree_1">
+            <div class="rect"></div>
+            <div class="agreementText">
+              Согласие на <a class="hover-opacity" href="#">обработку моих персональных данных</a>
+            </div>
+          </label>
+        </div>
+        <button class="button button--blue w-md-100">
+          Отправить новость
+        </button>
+      </div>
+
 
     </div>
   </div>

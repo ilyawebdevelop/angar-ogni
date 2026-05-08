@@ -298,3 +298,71 @@
   </div>
 
 </div>
+
+<!-- modalNews -->
+<div class="modal radius-2" id="modalNews">
+  <div class="modalInner">
+    <div class="modalHead mb-20">
+      <h3 class="h3 mb-0">Сообщить новость</h3>
+      <button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24" tabindex="-1">
+          <path d="M20 20L4 4m16 0L4 20"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="modalContent">
+
+      <div class="gap-20 inputGrid mb-20 mb-lg-16">
+        <div class="form-floating">
+          <input type="text" class="form-control formInput border-b-gray-300 bg-gray-100" id="newsName"
+            placeholder="Имя">
+          <label for="newsName">Имя</label>
+        </div>
+        <div class="form-floating">
+          <input type="tel" class="form-control formInput border-b-gray-300 bg-gray-100" id="newsTel"
+            placeholder="Телефон">
+          <label for="newsTel">Телефон</label>
+        </div>
+        <div class="form-floating">
+          <input type="email" class="form-control formInput border-b-gray-300 bg-gray-100" id="newsMail"
+            placeholder="Email">
+          <label for="newsMail">Email</label>
+        </div>
+        <div class="form-floating grid-col-12">
+          <textarea class="form-control formText border-b-gray-300 bg-gray-100 w-100" name="newsText" id="newsText"
+            placeholder="Текст новости" style="height: 96px;"></textarea>
+          <label for="newsText">Текст новости</label>
+        </div>
+      </div>
+
+      <div class="fileWrap mb-20 mb-lg-16">
+        <input class="fileInput" type="file" id="newsFile" hidden>
+        <label class="d-flex gap-2 align-items-center hover-opacity flex-wrap" for="newsFile">
+          <img src="@img/icons/file.svg" alt="icon">
+          <span class="color-brand-primary fileOutput">Прикрепить фото или файл</span>
+          <span class="color-gray-600">(max. 200Mb)</span>
+        </label>
+      </div>
+
+      <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between">
+
+        <div class="agreement mb-4 mb-md-0">
+          <input id="news_agree_1" type="checkbox">
+          <label for="news_agree_1">
+            <div class="rect"></div>
+            <div class="agreementText">
+              Согласие на <a class="hover-opacity" href="#">обработку моих персональных данных</a>
+            </div>
+          </label>
+        </div>
+        <button class="button button--blue w-md-100">
+          Отправить новость
+        </button>
+      </div>
+
+
+    </div>
+  </div>
+
+</div>

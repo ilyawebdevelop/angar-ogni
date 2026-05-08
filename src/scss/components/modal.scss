@@ -7,7 +7,9 @@
   overflow: hidden;
   padding-left: 40px;
   padding-right: 40px;
-  @media(max-width: 991px){
+  color: var(--main-color);
+
+  @media(max-width: 991px) {
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -17,7 +19,8 @@
     height: 100%;
     padding-top: 40px;
     padding-bottom: 40px;
-    @media(max-width: 991px){
+
+    @media(max-width: 991px) {
       padding-top: 16px;
       padding-bottom: 16px;
     }
@@ -27,5 +30,29 @@
     top: 10px;
     right: 10px;
     background-color: transparent;
+  }
+
+  .inputGrid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    .form-floating {
+      grid-column: 4 span;
+      @media(max-width: 767px){
+        grid-column: 12 span;
+      }
+
+      &.grid-col-12 {
+        grid-column: 12 span;
+      }
+    }
+
+    .form-control {
+      border: none;
+      border-radius: 2px;
+      &:focus {
+        background-color: var(--gray-gray-100);
+      }
+    }
   }
 }

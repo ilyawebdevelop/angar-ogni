@@ -102,6 +102,11 @@
       line-height: 16px;
     }
   }
+  &.w-md-100 {
+    @media(max-width: 767px){
+      width: 100%;
+    }
+  }
 
   svg {
     width: 16px;
@@ -134,4 +139,21 @@
     width: 16px;
     flex-shrink: 0;
   }
+}
+.headerSearchBtn {
+  img {
+    transition: opacity .2s linear, visibility .2s linear;
+  }
+  &.active {
+    background: url('@img/icons/close.svg') no-repeat center center / 24px;
+    img {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+.headerSearchEnter{
+  position: absolute;
+  right: 12px;
+  top: 12px;
 }

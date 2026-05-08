@@ -13,6 +13,40 @@ Fancybox.bind("[data-fancybox]", {
   closeButton: false,
 });
 
+let inputs = document.querySelectorAll('input[type="tel"]');
+let im = new Inputmask({
+  mask: '+7 (999) 999-99-99',
+  onBeforeWrite: function (event, buffer, caretPos, opts) {
+    // console.log(caretPos);
+    // Проверяем:
+    // 1. Позиция каретки (caretPos) равна 5 (вторая цифра в "99")
+    // 2. Нажата клавиша "8"
+    if (caretPos === 5 && event.key === '8') {
+      event.preventDefault(); // Запрещаем ввод     
+      // console.log("Ввод 8 в этой позиции запрещен!");
+      return {
+        refreshFromBuffer: true,
+        buffer: [],
+        caret: 4
+      };
+    }
+  },
+  onBeforePaste: function (pastedValue, opts) {
+    // Удаляем всё, кроме цифр
+    var processedValue = pastedValue.replace(/\D/g, "");
+
+    // Если первая цифра 7 или 8 и в строке 11 цифр, убираем первую
+    if (processedValue.length === 11 && (processedValue[0] === '7' || processedValue[0] === '8')) {
+      return processedValue.substring(1);
+    }
+
+    return pastedValue;
+  }
+
+});
+
+im.mask(inputs);
+
 // Import swiper
 import Swiper, { Navigation, Pagination, Autoplay, Mousewheel, EffectFade, Thumbs, Scrollbar } from 'swiper';
 Swiper.use([Navigation, Pagination, Autoplay, Mousewheel, EffectFade, Thumbs, Scrollbar]);
@@ -168,15 +202,24 @@ document.querySelectorAll('.articleSlider').forEach(n => {
 // search clear
 let searchInputArray = document.querySelectorAll('.formInput--search');
 searchInputArray.forEach(el => {
+  let enter = el.closest('.searchW').querySelector('.headerSearchEnter');
   let clearValue = el.closest('.searchW').querySelector('.search-clear');
   el?.addEventListener('input', (event) => {
     clearValue?.classList.add('active');
+    if (enter) {
+      enter.style.display = 'none';
+    }
+
   });
 
   clearValue?.addEventListener('click', () => {
     el.value = '';
     el.focus();
     clearValue?.classList.remove('active');
+    if (enter) {
+      enter.style.display = 'block';
+    }
+
   });
 
 });
@@ -276,7 +319,8 @@ if (mediaQueryMin992.matches) {
 
 }
 if (mediaQueryMax991.matches) {
-  jQuery('.mobileNavHead').click(function () {
+  jQuery('.mobileNavHead').click(function (event) {
+    event.preventDefault(); // Запретить переход
     jQuery(this).toggleClass('active');
     jQuery(this).siblings('.mobileNavBody').slideToggle();
   });
@@ -296,4 +340,33 @@ function fixHeader() {
 
 $(window).on('load scroll', function () {
   if ($('.header__fxd').length > 0) fixHeader();
+});
+
+let headerSearchBtnAll = document.querySelectorAll('.headerSearchBtn');
+let headerSearchField = document.querySelector('.search-action-field');
+headerSearchBtnAll.forEach(el => {
+  el.addEventListener('click', () => {
+    el.classList.toggle('active');
+    headerSearchField.classList.toggle('active');
+  });
+});
+
+// Находим все обертки блоков
+const fileWraps = document.querySelectorAll('.fileWrap');
+
+fileWraps.forEach(wrap => {
+    // Ищем элементы только внутри текущего блока
+    const input = wrap.querySelector('.fileInput');
+    const output = wrap.querySelector('.fileOutput');
+    const defaultText = "Прикрепить фото или файл";
+
+    input.addEventListener('change', function() {
+        if (this.files && this.files.length > 0) {
+            // Берем имя первого выбранного файла
+            output.textContent = this.files[0].name;
+        } else {
+            // Возвращаем текст по умолчанию, если файл не выбран
+            output.textContent = defaultText;
+        }
+    });
 });
