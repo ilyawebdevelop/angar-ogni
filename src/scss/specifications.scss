@@ -1648,23 +1648,36 @@ a.h3 {
       background-size: 12px;
     }
 
-    .agreementText {   
-      @media(max-width: 991px){
+    .agreementText {
+      @media(max-width: 991px) {
         font-size: 13px;
         line-height: 15px;
       }
+
       a {
         color: var(--brand-primary);
-      } 
+      }
     }
   }
 }
+
 .fileWrap {
   label {
     cursor: pointer;
     transition: opacity .2s linear;
   }
 }
-.form-floating > .form-control:focus ~ label::after {
+
+.form-floating>.form-control:focus~label::after {
   background-color: transparent;
+}
+
+.spinner {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  margin-top: 10px;
+  img {
+    width: 25px;
+  }
 }

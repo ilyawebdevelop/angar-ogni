@@ -17290,6 +17290,16 @@ a.h3 {
   background-color: transparent;
 }
 
+.spinner {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  margin-top: 10px;
+}
+.spinner img {
+  width: 25px;
+}
+
 .button {
   display: flex;
   align-items: center;
