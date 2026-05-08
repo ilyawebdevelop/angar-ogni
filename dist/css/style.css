@@ -17286,6 +17286,10 @@ a.h3 {
   transition: opacity 0.2s linear;
 }
 
+.form-floating > .form-control:focus ~ label::after {
+  background-color: transparent;
+}
+
 .button {
   display: flex;
   align-items: center;

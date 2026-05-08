@@ -1665,3 +1665,6 @@ a.h3 {
     transition: opacity .2s linear;
   }
 }
+.form-floating > .form-control:focus ~ label::after {
+  background-color: transparent;
+}
