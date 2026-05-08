@@ -54,21 +54,26 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-8">
+      <div class="col-lg-8 ">
+        <div class="posts">
+          @@include('../news/card-1-row.html',{})
+          @@include('../news/card-2-row.html',{})
+          @@include('../news/card-1-row.html',{})
+          @@include('../news/card-1-row.html',{})
+          @@include('../news/card-blue-empty.html',{})
+          @@include('../news/card-1-row.html',{})
+          @@include('../news/card-2-row.html',{})
 
-        @@include('../news/card-1-row.html',{})
-        @@include('../news/card-2-row.html',{})
-        @@include('../news/card-1-row.html',{})
-        @@include('../news/card-1-row.html',{})
-        @@include('../news/card-blue-empty.html',{})
-        @@include('../news/card-1-row.html',{})
-        @@include('../news/card-2-row.html',{})
-        @@include('../news/card-1-row.html',{})
-        @@include('../news/card-blue-empty.html',{})
-        @@include('../news/card-1-row.html',{})
-        @@include('../news/card-3-row.html',{})
+        </div>
+        <div id="spinner1" class="spinner">Загрузка...</div>
+        <div class="pagination">
+          <a href="page-2.html" class="next">Next</a>
+      
+        </div>
 
       </div>
+
+
       @@include('../news/sidebar.html',{})
     </div>
 

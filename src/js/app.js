@@ -355,18 +355,28 @@ headerSearchBtnAll.forEach(el => {
 const fileWraps = document.querySelectorAll('.fileWrap');
 
 fileWraps.forEach(wrap => {
-    // Ищем элементы только внутри текущего блока
-    const input = wrap.querySelector('.fileInput');
-    const output = wrap.querySelector('.fileOutput');
-    const defaultText = "Прикрепить фото или файл";
+  // Ищем элементы только внутри текущего блока
+  const input = wrap.querySelector('.fileInput');
+  const output = wrap.querySelector('.fileOutput');
+  const defaultText = "Прикрепить фото или файл";
 
-    input.addEventListener('change', function() {
-        if (this.files && this.files.length > 0) {
-            // Берем имя первого выбранного файла
-            output.textContent = this.files[0].name;
-        } else {
-            // Возвращаем текст по умолчанию, если файл не выбран
-            output.textContent = defaultText;
-        }
-    });
+  input.addEventListener('change', function () {
+    if (this.files && this.files.length > 0) {
+      // Берем имя первого выбранного файла
+      output.textContent = this.files[0].name;
+    } else {
+      // Возвращаем текст по умолчанию, если файл не выбран
+      output.textContent = defaultText;
+    }
+  });
 });
+
+let ias = new InfiniteAjaxScroll('.posts', {
+  item: '.post',
+  next: '.next',
+  pagination: '.pagination',
+  spinner: '.spinner',
+
+  // alternatively we can pass an Element
+  spinner: document.getElementById('spinner1'),
+})
