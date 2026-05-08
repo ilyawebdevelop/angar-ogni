@@ -371,12 +371,14 @@ fileWraps.forEach(wrap => {
   });
 });
 
-let ias = new InfiniteAjaxScroll('.posts', {
-  item: '.post',
-  next: '.next',
-  pagination: '.pagination',
-  spinner: '.spinner',
+if (document.querySelector('.posts')) {
+  let ias = new InfiniteAjaxScroll('.posts', {
+    item: '.post',
+    next: '.next',
+    pagination: '.pagination',
+    spinner: '.spinner',
 
-  // alternatively we can pass an Element
-  spinner: document.getElementById('spinner1'),
-})
+    // alternatively we can pass an Element
+    spinner: document.getElementById('spinner1'),
+  })
+}
